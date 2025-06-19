@@ -22,7 +22,7 @@
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-org/kiraform.git
+git clone https://github.com/kiritoo9/kiraform-webapp
 cd kiraform
 ```
 
