@@ -1,0 +1,152 @@
+/* Dashboard-specific styles */
+
+.welcome-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.workspace-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.workspace-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    padding: 32px 28px;
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.workspace-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #1d4ed8;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.workspace-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #1d4ed8;
+}
+
+.workspace-card:hover::before {
+    opacity: 1;
+}
+
+.workspace-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-lg);
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.1), rgba(59, 130, 246, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #1d4ed8;
+    font-size: 28px;
+    transition: all var(--transition-base);
+}
+
+.workspace-card:hover .workspace-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.2), rgba(59, 130, 246, 0.2));
+}
+
+.workspace-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.workspace-description {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.workspace-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-value {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    color: var(--text-secondary);
+}
+
+/* Dark mode workspace styles */
+[data-theme="dark"] .workspace-card::before,
+[data-theme="dark"] .workspace-card:hover {
+    border-color: #60a5fa;
+}
+
+[data-theme="dark"] .workspace-card::before {
+    background: #60a5fa;
+}
+
+[data-theme="dark"] .workspace-icon {
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(147, 197, 253, 0.15));
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .workspace-card:hover .workspace-icon {
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.25), rgba(147, 197, 253, 0.25));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .workspace-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    
+    .welcome-header {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workspace-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .workspace-card {
+        padding: 24px 20px;
+    }
+    
+    .workspace-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+} 
