@@ -72,7 +72,7 @@ async function addNewWorkspace() {
 }
 
 function detailWorkspaceHandler(workspace: any) {
-  console.log("detail workspace", workspace)
+  router.push({ name: 'campaign', params: { id: workspace.id } });
 }
 
 function editWorkspaceHandler(workspace: any) {
@@ -209,6 +209,7 @@ onMounted(async () => {
 
 <style scoped src="../assets/css/common.css"></style>
 <style scoped src="../assets/css/dashboard.css"></style>
+<style scoped src="../assets/css/breadcrumb.css"></style>
 <style scoped>
 /* Container */
 .container {
@@ -623,45 +624,5 @@ onMounted(async () => {
     width: 100%;
     justify-content: center;
   }
-}
-
-/* Minimalist Breadcrumb */
-.welcome-header {
-  margin-bottom: 32px;
-  text-align: left;
-}
-
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #6b7280;
-  padding: 0;
-}
-
-.breadcrumb-item {
-  font-weight: 500;
-  transition: color 0.15s ease;
-}
-
-.breadcrumb-item:not(.current) {
-  color: #9ca3af;
-  cursor: pointer;
-}
-
-.breadcrumb-item:not(.current):hover {
-  color: #1d4ed8;
-}
-
-.breadcrumb-item.current {
-  color: #111827;
-  font-weight: 600;
-}
-
-.breadcrumb-separator {
-  font-size: 10px;
-  color: #d1d5db;
-  margin: 0 2px;
 }
 </style>

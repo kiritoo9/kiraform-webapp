@@ -4,6 +4,7 @@ import { useAuthStore } from '@/stores/access_token';
 // import views
 import HomeView from '../views/HomeView.vue'
 import WorkspaceView from '../views/WorkspaceView.vue'
+import CampaignView from '@/views/CampaignView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,12 @@ const router = createRouter({
       path: '/workspace',
       name: 'workspace',
       component: WorkspaceView,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/campaign/:id',
+      name: 'campaign',
+      component: CampaignView,
       meta: { requiresAuth: true }
     },
   ],

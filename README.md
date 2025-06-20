@@ -1,23 +1,23 @@
 # KiraForm
 
-**KiraForm** adalah platform manajemen formulir modern yang memungkinkan pengguna untuk membuat, mengelola, dan menganalisis formulir dengan mudah. Dibangun menggunakan Vue.js 3 dengan TypeScript dan Vite untuk performa optimal.
+**KiraForm** is a modern form management platform that allows users to create, manage, and analyze forms with ease. Built using Vue.js 3 with TypeScript and Vite for optimal performance.
 
-## 🚀 Fitur Utama
+## 🚀 Key Features
 
-- **Workspace Management**: Organisasi formulir dalam workspace yang terstruktur
-- **Form Builder**: Interface drag-and-drop untuk membuat formulir (coming soon)
-- **Real-time Analytics**: Dashboard analitik untuk tracking submission
-- **Responsive Design**: Antarmuka yang optimal di semua perangkat
-- **Dark/Light Mode**: Tema yang dapat disesuaikan dengan preferensi pengguna
-- **Modern Architecture**: Menggunakan Vue 3 Composition API dengan TypeScript
+- **Workspace Management**: Organize forms in structured workspaces
+- **Form Builder**: Drag-and-drop interface for creating forms (coming soon)
+- **Real-time Analytics**: Analytics dashboard for tracking submissions
+- **Responsive Design**: Optimal interface across all devices
+- **Dark/Light Mode**: Customizable themes based on user preferences
+- **Modern Architecture**: Uses Vue 3 Composition API with TypeScript
 
-## 📋 Persyaratan Sistem
+## 📋 System Requirements
 
-- **Node.js**: v16.0.0 atau lebih tinggi
-- **npm**: v7.0.0 atau lebih tinggi
+- **Node.js**: v16.0.0 or higher
+- **npm**: v7.0.0 or higher
 - **Browser**: Chrome 90+, Firefox 88+, Safari 14+
 
-## 🛠 Instalasi
+## 🛠 Installation
 
 ### 1. Clone Repository
 
@@ -34,7 +34,7 @@ npm install
 
 ### 3. Environment Setup
 
-Buat file `.env.local` di root directory:
+Create a `.env.local` file in the root directory:
 
 ```env
 VITE_API_BASE_URL=http://localhost:3000/api
@@ -48,7 +48,7 @@ VITE_APP_VERSION=1.0.0
 npm run dev
 ```
 
-Aplikasi akan tersedia di `http://localhost:5173`
+The application will be available at `http://localhost:5173`
 
 ## 🏗 Build & Deploy
 
@@ -85,11 +85,11 @@ vercel --prod
 #### Netlify Deployment
 
 ```bash
-# Build terlebih dahulu
+# Build first
 npm run build
 
-# Upload folder dist ke Netlify
-# atau gunakan Netlify CLI
+# Upload dist folder to Netlify
+# or use Netlify CLI
 npm i -g netlify-cli
 netlify deploy --prod --dir=dist
 ```
@@ -139,53 +139,53 @@ npm run test:e2e
 npm run test:coverage
 ```
 
-## 🔧 Scripts Tersedia
+## 🔧 Available Scripts
 
-| Script | Deskripsi |
-|--------|-----------|
-| `npm run dev` | Menjalankan development server dengan hot-reload |
-| `npm run build` | Build untuk production |
-| `npm run preview` | Preview build production secara lokal |
-| `npm run test:unit` | Menjalankan unit tests dengan Vitest |
-| `npm run lint` | Linting kode dengan ESLint |
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Run development server with hot-reload |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run test:unit` | Run unit tests with Vitest |
+| `npm run lint` | Lint code with ESLint |
 | `npm run lint:fix` | Auto-fix linting issues |
-| `npm run type-check` | Type checking dengan vue-tsc |
+| `npm run type-check` | Type checking with vue-tsc |
 
-## 📁 Struktur Project
+## 📁 Project Structure
 
 ```
 kiraform/
 ├── src/
-│   ├── components/          # Komponen Vue yang dapat digunakan ulang
-│   ├── views/              # Halaman-halaman aplikasi
-│   ├── composables/        # Vue composables untuk logic bisnis
+│   ├── components/          # Reusable Vue components
+│   ├── views/              # Application pages
+│   ├── composables/        # Vue composables for business logic
 │   │   ├── auth/           # Authentication logic
-│   │   ├── common/         # Utilities umum
+│   │   ├── common/         # Common utilities
 │   │   └── masters/        # Master data management
-│   ├── stores/             # Pinia stores untuk state management
+│   ├── stores/             # Pinia stores for state management
 │   ├── router/             # Vue Router configuration
 │   ├── assets/             # Static assets (CSS, JS, images)
-│   └── main.ts             # Entry point aplikasi
+│   └── main.ts             # Application entry point
 ├── public/                 # Public static files
 ├── tests/                  # Test files
-└── docs/                   # Dokumentasi tambahan
+└── docs/                   # Additional documentation
 ```
 
 ## 🤝 Contributing
 
-1. Fork repository
-2. Buat feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit perubahan (`git commit -m 'Add amazing feature'`)
-4. Push ke branch (`git push origin feature/amazing-feature`)
-5. Buat Pull Request
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Create a Pull Request
 
 ### Development Guidelines
 
-- Gunakan TypeScript untuk type safety
-- Ikuti Vue 3 Composition API patterns
-- Tulis unit tests untuk fitur baru
-- Ikuti ESLint configuration
-- Gunakan conventional commits
+- Use TypeScript for type safety
+- Follow Vue 3 Composition API patterns
+- Write unit tests for new features
+- Follow ESLint configuration
+- Use conventional commits
 
 ## 📄 License
 
